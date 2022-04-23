@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Minecraft';
+    src: url('/fonts/minecraft.woff');
+}
+* {
+color: #DDD92A;
+font-family: 'Minecraft';
+}
+
