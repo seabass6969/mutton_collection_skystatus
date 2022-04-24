@@ -1,15 +1,21 @@
 <script>
     import Router from 'svelte-spa-router'
+    import Topbar from './component/topbar.svelte'
     import index from './routes/index.svelte'
     import error from './routes/error.svelte'
+    import oasis_sheep from './routes/oasis_sheep.svelte'
+    import sheep_kills from './routes/sheep_kills.svelte'
     const routes = {
         '/': index,
+        '/oasis_sheep': oasis_sheep,
+        '/sheep_kills':sheep_kills,
         '*': error
     }
 </script>
 
 <main>
 <div class="back-bg"></div>
+<Topbar />
 <Router routes={routes}/>
 </main>
 

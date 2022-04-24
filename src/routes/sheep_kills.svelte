@@ -1,14 +1,14 @@
 <script>
 import Thinking from './../component/thinking.svelte'
-    async function getOasisSheepKills(){
-        let response = await fetch("https://skyblock-api.matdoes.dev/leaderboards/kills_oasis_sheep")
+    async function getKillsSheep(){
+        let response = await fetch("https://skyblock-api.matdoes.dev/leaderboards/kills_sheep")
         let output = await response.json()
         return output
     }
-    let outOasisSheepKills = getOasisSheepKills()
+    let outKillsSheep = getKillsSheep()
 </script>
     <h1 class="maincolor">all the cool people of the Oasis Sheep kills</h1>
-    {#await outOasisSheepKills}
+    {#await outKillsSheep}
     <Thinking />
     {:then output}
     {#each output.list as playerinfo, i}
